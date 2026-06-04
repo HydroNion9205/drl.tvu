@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm rèn luyện | Thống kê kết quả đánh giá</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-text">ĐIỂM RÈN LUYỆN</span>
+            </div>
+            <div class="sidebar-scroll">
+                <div class="user-profile">
+                    <div class="user-name">PHUOCMIEN</div>
+                    <div class="user-role"><i class="fas fa-user-tie"></i> CVHT/GVCN</div>
+                </div>
+                <ul class="menu">
+                    <li><a href="#"><i class="nav-icon fas fa-file-pdf"></i> <span class="menu-text">Hướng dẫn sử dụng</span></a></li>
+                    <li class="menu-title"><span class="menu-text">KẾT QUẢ ĐÁNH GIÁ</span></li>
+                    <li><a href="#"><i class="fa-solid fa-check-double"></i> <span class="menu-text">Danh sách kết quả</span></a></li>
+                    <li class="active"><a href="#"><i class="fas fa-chart-pie"></i> <span class="menu-text">Thống kê lớp</span></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <header class="main-header">
+                <div class="header-left">
+                    <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+                <div class="header-right">
+                    <i class="fas fa-expand"></i>
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </header>
+
+            <main class="content">
+                <h2>Thống kê kết quả đánh giá</h2>
+
+                <section class="search-section">
+                    <h3>Thông tin tìm kiếm</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Học kỳ</label>
+                            <select>
+                                <option>HK1-2025-2026</option>
+                                <option>HK2-2025-2026</option>
+                                <option>HK1-2026-2027</option>
+                                <option>HK2-2026-2027</option>
+                                <option>HK1-2027-2028</option>
+                                <option>HK2-2027-2028</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lớp</label>
+                            <select>
+                                <option>DA25TTD - ĐH Công nghệ thông tin D 2025</option>
+                                <option>DA23TTA - ĐH Công nghệ thông tin A 2023</option>
+                                <option>DA24TTD - ĐH Công nghệ thông tin D 2024</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Xếp loại</label>
+                            <select>
+                                <option>Xuất sắc</option>
+                                <option>Giỏi</option>
+                                <option>Khá</option>
+                                <option>Trung bình</option>
+                                <option>Yếu</option>
+                                <option>Kém</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Vai trò</label>
+                            <select>
+                                <option>Hội đồng đánh giá</option>
+                                <option>Cố vấn học tập</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-primary">Tìm kiếm</button>
+                        <button class="btn btn-link">reset</button>
+                    </div>
+                </section>
+
+                <section class="data-section">
+                    <div class="table-container">
+                        <h3>Danh sách Sinh viên</h3>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>MSSV</th>
+                                        <th>Họ và tên</th>
+                                        <th>Số điểm</th>
+                                        <th>Xếp loại</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="student-table-body">
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h3>Tỉ lệ điểm rèn luyện</h3>
+                        <div class="donut-chart-wrapper">
+                            <div class="donut-chart"></div> 
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item"><span><span class="color-box" style="background: #28a745;"></span> Xuất sắc (27/36)</span> <span class="percent">75%</span></div>
+                            <div class="legend-item"><span><span class="color-box" style="background: #007bff;"></span> Tốt (3/36)</span> <span class="percent">8.3%</span></div>
+                            <div class="legend-item"><span><span class="color-box" style="background: #17a2b8;"></span> Khá (1/36)</span> <span class="percent">2.7%</span></div>
+                            <div class="legend-item"><span><span class="color-box" style="background: #dc3545;"></span> Kém (5/36)</span> <span class="percent">14%</span></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="copyright">CopyRight © 2023 TVU</div>
+                <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
